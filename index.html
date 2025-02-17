@@ -3,73 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Subgrid</title>
+    <title>WTF2EAT</title>
     <link rel="stylesheet" href="../css/index.css" />
   </head>
-
   <body>
-    <!-- HEADER***********'' -->
-    <header>
-      <div class="header">
-        <div class="logo">
-          <a href="index.html">
-            <img src="../img/MIT-LOGO.jpg" alt="logo" />
-          </a>
-        </div>
-        <div class="fix_mellemrum">
-          <a href="../html/index.html" class="desktop">HOME</a>
-
-          <a href="../html/index.html#projects_burger" class="desktop">PROJECTS</a>
-
-          <a href="../html/index.html#contact_me" class="desktop">CONTACT</a>
-
-          <a href="../html/about_me.html" class="desktop">ABOUT ME</a>
-        </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/MIT-LOGO.jpg" alt="logo" />
+        </a>
+      </div>
+      <nav class="fix_mellemrum">
         <div class="hamburger">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
-      </div>
+      </nav>
 
+      <!-- Mobile Menu -->
       <div class="menu-wrapper hidden">
         <div class="menu">
-          <a href="../html/index.html">HOME</a>
-
-          <a href="../html/index.html#projects_burger">PROJECTS</a>
-
-          <a href="../html/index.html#contact_me">CONTACT</a>
-
-          <a href="../html/about_me.html">ABOUT ME</a>
+          <a href="index.html">HOME</a>
+          <a href="#projects_burger">PROJECTS</a>
+          <a href="#contact_me">CONTACT</a>
+          <a href="about_me.html">ABOUT ME</a>
         </div>
       </div>
     </header>
 
-    <h1>Herunder er container med cards som bruger Subgrid</h1>
-    <div class="card_container">
-      <div class="card">
-        <h2 class="item">Overskrift på card 1</h2>
-        <div class="item">Tekst om produktet</div>
-        <div class="item">Pris i kr: 350,-</div>
-      </div>
-      <div class="card">
-        <h2 class="item">Overskrift på card 2</h2>
-        <div class="item">Tekst om produktet</div>
-        <div class="item">Pris i kr: 350,-</div>
-      </div>
+    <!-- Main Content -->
+    <main>
+      <h2 class="categories-title">Fucking categories</h2>
 
-      <div class="card">
-        <h2 class="item">Overskrift på card 3</h2>
-        <div class="item">Tekst om produktet</div>
-        <div class="item">Pris i kr: 350,-</div>
+      <div class="card_container">
+        <div class="card">
+          <img src="" alt="Salad" class="item-img" />
+          <div class="item-name">Fucking salad</div>
+        </div>
+        <div class="card">
+          <img src="img/salad2.jpg" alt="Salad" class="item-img" />
+          <div class="item-name">Fucking salad</div>
+        </div>
+        <div class="card">
+          <img src="img/salad3.jpg" alt="Salad" class="item-img" />
+          <div class="item-name">Fucking salad</div>
+        </div>
+        <div class="card">
+          <img src="img/salad4.jpg" alt="Salad" class="item-img" />
+          <div class="item-name">Fucking salad</div>
+        </div>
       </div>
-      <div class="card">
-        <h2 class="item">Overskrift på card 4</h2>
-        <div class="item">Tekst om produktet</div>
-        <div class="item">Pris i kr: 350,-</div>
-      </div>
-    </div>
+    </main>
 
-    <script src="/java/header.js"></script>
+    <script src="js/header.js"></script>
   </body>
 </html>

@@ -198,3 +198,102 @@ background: radial-gradient(circle, rgba(108,177,255,1) 0%, rgba(6,100,206,1) 10
     padding: 20px;
   }
   
+  /* Base Styles */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+}
+
+/* Header Styles (keep your existing) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #282424;
+}
+
+.logo img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+/* Categories Grid */
+.categories-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  color: #0664ce;
+  text-align: center;
+  margin: 100px 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(108, 177, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.item-img:hover {
+  transform: scale(1.03);
+}
+
+.item-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: #282424;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .categories-title {
+      margin: 80px 0 20px;
+      font-size: 1.5rem;
+  }
+  
+  .card_container {
+      gap: 15px;
+      padding: 0 15px;
+  }
+  
+  .item-img {
+      height: 150px;
+  }
+  
+  .item-name {
+      font-size: 1rem;
+  }
+}
+
+/* Keep your existing burger menu styles below */
+/* Hamburger menu styles... */
