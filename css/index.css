@@ -1,0 +1,17 @@
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-rows: subgrid; /* Arver RÆKKER fra .container */
+    grid-row: span 3; /* Strækker sig over alle 3 RÆKKER FRA HOVEDGRIDDET */
+    border: 1px solid black;
+  }
+  
+  .item {
+    padding: 20px;
+  }
+  
