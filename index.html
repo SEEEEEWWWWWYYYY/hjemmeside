@@ -7,36 +7,28 @@
     <link rel="stylesheet" href="../css/index.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">
-        <a href="index.html">
-          <img src="img/MIT-LOGO.jpg" alt="logo" />
-        </a>
-      </div>
-      <nav class="fix_mellemrum">
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </nav>
-
-      <!-- Mobile Menu -->
-      <div class="menu-wrapper hidden">
-        <div class="menu">
-          <a href="index.html">HOME</a>
-          <a href="#projects_burger">PROJECTS</a>
-          <a href="#contact_me">CONTACT</a>
-          <a href="about_me.html">ABOUT ME</a>
+    <header id="header">
+      <div class="nav-container">
+        <h1 id="title">WTF2EAT</h1>
+        <div class="menu-container">
+          <button class="burger-menu" id="burger-button">☰</button>
         </div>
       </div>
     </header>
 
+    <div class="menu-screen" id="menu">
+      <div class="menu-content">
+        <ul class="menu-list">
+          <li><a href="#">Opskrifter</a></li>
+          <li><a href="#">Om os</a></li>
+        </ul>
+      </div>
+    </div>
+
     <!-- Main Content -->
     <main>
       <div class="hero-section">
-        <img src="../img/vare.png" alt="Food selection" class="hero-image" />
+        <img src="/img/mad.png" alt="Food selection" class="hero-image" />
       </div>
 
       <h2 class="categories-title">Fucking categories</h2>
@@ -61,6 +53,6 @@
       </div>
     </main>
 
-    <script src="js/header.js"></script>
+    <script src="/java/header.js"></script>
   </body>
 </html>
