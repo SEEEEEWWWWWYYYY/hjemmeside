@@ -4,178 +4,78 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+  background-color: #f4ebc6;
+  font-family: "Inknut Antiqua", serif;
 }
-.header {
-  position: absolute; 
-  top: 0;
-  left: 0;
+
+h2 {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+header {
+  background: #eed791;
+  color: rgb(5, 5, 5);
   width: 100%;
-  z-index: 1000; 
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #282424;
-  padding: 40px;
-  position: fixed;
+  transition: transform 0.3s ease-in-out;
 }
 
-.fjern_bg
-{
-  mix-blend-mode: multiply;
-  z-index: 1001;
-  margin-top: -75px;
-}
-
-
-.logo img{
-  width: 70px;
-  position: fixed;
-  z-index: 1001;
-  margin-top: -30px;
-  border-radius: 50%;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  font-family: "Inter";
-  font-size: 15pt;
-  color: #6cb1ff;
-padding-top: 10px;
-
-}
-
-.header {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
-
-/* burger */
-
-.fix_mellemrum {
-  display: flex;
-  gap: 50px;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
-.hamburger {
-  position: fixed; 
-  top: 20px;      
-  right: 20px;    
-  z-index: 1000;  
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.burger-menu {
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: rgb(16, 15, 15);
   cursor: pointer;
 }
-  
-  .line {
-    height: 2px;
-    width: 25px;
-    background: rgb(108,177,255);
-background: radial-gradient(circle, rgba(108,177,255,1) 0%, rgba(6,100,206,1) 100%);
-   
-  
-  }
-  
 
-  .menu {
-      position: fixed; 
-      top: 0; 
-      left: 50%; 
-      transform: translateX(40%); 
-  
-      display: flex;
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      background: rgba(24, 29, 39, 0.9); 
-      backdrop-filter: blur(10px); 
-      padding: 10px 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-      margin-top: 80px;
-      max-width: 400px;
-      z-index: 1000; 
-    }
+/* Overlay-menu */
+.menu-screen {
+  display: none;
+  width: 100%;
 
-
-  .menu a {
-    font-family: 'Playfair Display', serif; 
-    font-size: 1.5rem; 
-    font-weight: bold; 
-    color: #0664ce; 
-    text-decoration: none;
-    letter-spacing: 1px; 
-    transition: color 0.3s ease, transform 0.3s ease;
-    border-radius: 0px; 
-
-
+  background: #eed791; /* Ensfarvet baggrund */
+  flex-direction: column;
+  align-items: center;
 }
 
-.menu a:hover {
-    color: #6cb1ff; 
-    transform: scale(.99); 
-
+/* Når menuen åbnes */
+.menu-open {
+  display: flex;
 }
-  
-  .hidden{
-    display: none;
-  }
-  
 
-  @media (width <600px) {
+/* Større skriftstørrelse og fjern listepunkt */
+.menu-list {
+  list-style: none; /* Fjerner '-' */
+  padding: 0;
+  text-align: center;
+  line-height: 80px;
+}
 
-      .menu {
-        font-family: "Inter";
-        display: flex;
-        justify-content: space-between;
-        line-height: 3em;
-      }
-      
-      .menu h1 {
-        font-size: 25pt;
-      }
-      
-      #logo img {
-        width: 70px;
-      margin-top: -10px;
-      margin-left: -10px;
-      } 
-  }        
+.menu-list li {
+  font-size: 60px; /* Større skriftstørrelse */
+  color: rgb(13, 12, 12);
+  margin: 20px 0;
+}
 
-  @media (width <600px) {
+/* Fjern underline og farveskift */
+.menu-list li a {
+  text-decoration: none;
+  color: rgb(11, 10, 10);
+  pointer-events: none;
+}
 
-      .desktop {
-        display: none;
-      
-      }
-      }
-      
-      
-      @media (width >599px) {
-        .menu {
-      display: none;
-        }
-      
-        .hamburger {
-          display: none;
-        }
-      
-      }
-
-      
-      /* header slut */
+/* Slut header */
 
 
 
