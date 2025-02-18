@@ -333,3 +333,57 @@ header {
 }
 
 /* FOR THE BROKIES KODNING SLUUUUUUUT ********************** */
+
+/* FOOTER */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #eed791;
+  width: 100%;
+  justify-items: center;
+  line-height: 40px;
+}
+
+.footer_overskrift {
+  display: grid;
+  grid-column: 1 / 3;
+  text-align: center; /* Centrerer teksten */
+  max-width: 30ch; /* Begrænser længden af linjen */
+}
+
+.footer_overskrift h3 {
+  font-size: 40px;
+}
+
+.kategori {
+  margin-right: 40px;
+}
+.folg_os {
+  grid-column: 2 / 3;
+}
+
+@media (min-width: 552px) {
+
+
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer_overskrift {
+    grid-column: 1 / 2;
+  }
+  .grid_1-1 {
+    gap: 400px;
+  }
+  .kategori {
+    grid-column: 2 / 3;
+  }
+  .folg_os {
+    grid-column: 3 / 4;
+  }
+}
+
+
+/* FOOOTEEER SLUUUUT */
