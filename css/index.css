@@ -196,3 +196,140 @@ header {
   }
 }
 
+
+
+
+/* FOR THE BROKIES KODNING ********************** */
+
+/* For the Brokies Section */
+.broke-section {
+  background: #fdf8e4;
+  padding: 40px 20px;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.broke-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.broke-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.broke-text {
+  order: 2;
+  text-align: center;
+}
+
+.broke-title {
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2.5rem;
+  color: #5a3e1b;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.broke-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5a3e1b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.broke-image {
+  order: 1;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.broke-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: rotate(-3deg);
+}
+
+.price-tag {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: #ffd700;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5a3e1b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .broke-section {
+      padding: 80px 20px;
+  }
+  
+  .broke-content {
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+  }
+  
+  .broke-text {
+      order: 1;
+      flex: 1;
+      text-align: left;
+  }
+  
+  .broke-image {
+      order: 2;
+      flex: 0 0 45%;
+      transform: translateY(-20px);
+  }
+  
+  .broke-img {
+      transform: rotate(-5deg);
+  }
+  
+  .price-tag {
+      font-size: 1.8rem;
+      padding: 15px 30px;
+  }
+}
+
+/* Decorative Elements */
+.broke-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(238, 215, 145, 0.2);
+  border-radius: 50%;
+}
+
+.broke-section::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(244, 183, 0, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* FOR THE BROKIES KODNING SLUUUUUUUT ********************** */
