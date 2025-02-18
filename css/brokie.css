@@ -123,7 +123,7 @@ img {
   grid-column: 2 / 3;
 }
 
-@media (min-width: 428px) {
+@media (min-width: 552px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 400px 400px;
