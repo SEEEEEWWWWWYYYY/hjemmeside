@@ -1,3 +1,120 @@
-.test {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4ebc6;
+}
+h1,
+h2,
+h3 {
+  font-family: "Inknut Antiqua", serif;
+}
+
+header {
+  background: #eed791;
+  color: rgb(5, 5, 5);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.burger-menu {
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: rgb(16, 15, 15);
+  cursor: pointer;
+}
+
+/* Overlay-menu */
+.menu-screen {
   display: none;
+  width: 100%;
+
+  background: #eed791; /* Ensfarvet baggrund */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Når menuen åbnes */
+.menu-open {
+  display: flex;
+}
+
+/* Større skriftstørrelse og fjern listepunkt */
+.menu-list {
+  list-style: none; /* Fjerner '-' */
+  padding: 0;
+  text-align: center;
+  line-height: 80px;
+}
+
+.menu-list li {
+  font-size: 60px; /* Større skriftstørrelse */
+  color: rgb(13, 12, 12);
+  margin: 20px 0;
+}
+
+/* Fjern underline og farveskift */
+.menu-list li a {
+  text-decoration: none;
+  color: rgb(11, 10, 10);
+  pointer-events: none;
+}
+img {
+  width: 90vw;
+  height: auto;
+}
+
+.kategori_tekst {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+button {
+  font-size: 2rem;
+}
+button a {
+  text-decoration: none;
+}
+
+.front_billed {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.front_billed img {
+  border-radius: 10px;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: subgrid; /* Arver RÆKKER fra .container */
+  grid-row: span 3; /* Strækker sig over alle 3 RÆKKER FRA HOVEDGRIDDET */
+  border: 1px solid black;
+}
+
+.item {
+  padding: 20px;
+}
+
+.h1_tekst {
+  display: grid;
+  text-align: center;
 }
