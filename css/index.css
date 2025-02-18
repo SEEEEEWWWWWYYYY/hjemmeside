@@ -6,6 +6,7 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, #f0f4ff, #ffffff);
 }
+
 .header {
   position: absolute; 
   top: 0;
@@ -191,7 +192,7 @@ background: radial-gradient(circle, rgba(108,177,255,1) 0%, rgba(6,100,206,1) 10
     display: grid;
     grid-template-rows: subgrid; /* Arver RÆKKER fra .container */
     grid-row: span 3; /* Strækker sig over alle 3 RÆKKER FRA HOVEDGRIDDET */
-    border: 1px solid black;
+
   }
   
   .item {
@@ -252,12 +253,11 @@ body {
 }
 
 .item-img {
-  width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 15px;
   box-shadow: 0 4px 15px rgba(108, 177, 255, 0.2);
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .item-img:hover {
@@ -274,26 +274,47 @@ body {
   letter-spacing: 1px;
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  .categories-title {
-      margin: 80px 0 20px;
-      font-size: 1.5rem;
-  }
-  
-  .card_container {
-      gap: 15px;
-      padding: 0 15px;
-  }
-  
-  .item-img {
-      height: 150px;
-  }
-  
-  .item-name {
-      font-size: 1rem;
-  }
-}
+
 
 /* Keep your existing burger menu styles below */
 /* Hamburger menu styles... */
+
+/* Hero Section */
+.hero-section {
+  margin-top: 80px; /* Match header height */
+  padding: 0 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: 40vh; /* Reduced from previous size */
+  max-height: 300px; /* Maximum size for desktop */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+  .hero-image {
+      height: 30vh; /* Even smaller on desktop */
+      max-height: 250px;
+  }
+  
+  .categories-title {
+      margin-top: 40px;
+      font-size: 2rem;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+  .hero-image {
+      height: 25vh; /* Slightly larger on mobile */
+      max-height: 200px;
+  }
+}
+
