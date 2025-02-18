@@ -98,6 +98,7 @@ img {
 
 .footer {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: #eed791;
   width: 100%;
   justify-items: center;
@@ -106,6 +107,7 @@ img {
 
 .footer_overskrift {
   display: grid;
+  grid-column: 1 / 3;
   text-align: center; /* Centrerer teksten */
   max-width: 30ch; /* Begrænser længden af linjen */
 }
@@ -114,14 +116,7 @@ img {
   font-size: 40px;
 }
 
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #eed791;
-}
-
 .kategori {
-  grid-column: 1 / 2;
   margin-right: 40px;
 }
 .folg_os {
