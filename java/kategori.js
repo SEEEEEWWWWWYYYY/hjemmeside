@@ -20,9 +20,12 @@ function showList(recipes) {
     .map((recipe, index) => {
       markup += `
         <div class="card">
+        <a href="recipe.html">
           <img src="https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp" alt="Pizza" class="item-img" />
+          </a>
           <div class="item-name">${recipe.name}</div>
         </div>
+        
       
        `;
     })
