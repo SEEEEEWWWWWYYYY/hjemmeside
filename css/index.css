@@ -5,13 +5,21 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4ebc6;
+}
+h1,
+h2,
+h3 {
   font-family: "Inknut Antiqua", serif;
 }
 
 h2 {
-  font-family: "Inknut Antiqua", serif;
   font-size: 40px;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 header {
@@ -72,44 +80,32 @@ header {
 .menu-list li a {
   text-decoration: none;
   color: rgb(11, 10, 10);
-  pointer-events: none;
 }
 
 /* Slut header */
 
-
-
-
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
 
 .card_container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-  }
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  .card_container {
+.card {
+  display: grid;
+  grid-template-rows: subgrid; /* Arver RÆKKER fra .container */
+  grid-row: span 3; /* Strækker sig over alle 3 RÆKKER FRA HOVEDGRIDDET */
+}
 
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  
-  
-  .card {
-    display: grid;
-    grid-template-rows: subgrid; /* Arver RÆKKER fra .container */
-    grid-row: span 3; /* Strækker sig over alle 3 RÆKKER FRA HOVEDGRIDDET */
-
-  }
-  
-  .item {
-    padding: 20px;
-  }
-
-
-
+.item {
+  padding: 20px;
+}
 
 /* Categories Grid */
 .categories-title {
@@ -120,8 +116,6 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-
 
 .card {
   display: flex;
@@ -142,7 +136,7 @@ header {
 }
 
 .item-name {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   color: #282424;
   text-align: center;
@@ -151,8 +145,9 @@ header {
   letter-spacing: 1px;
 }
 
-.test {right: 0;}
-
+.test {
+  right: 0;
+}
 
 /* Keep your existing burger menu styles below */
 /* Hamburger menu styles... */
@@ -183,21 +178,16 @@ header {
 /* Desktop Adjustments */
 @media (min-width: 768px) {
   .hero-image {
-      height: 50vh;
+    height: 50vh;
   }
 
+  /* Add this to prevent horizontal scroll */
 
-/* Add this to prevent horizontal scroll */
-
-  
   .categories-title {
-      margin-top: 40px;
-      font-size: 2rem;
+    margin-top: 40px;
+    font-size: 2rem;
   }
 }
-
-
-
 
 /* FOR THE BROKIES KODNING ********************** */
 
@@ -228,7 +218,6 @@ header {
 }
 
 .broke-title {
-  font-family: 'Inknut Antiqua', serif;
   font-size: 2.5rem;
   color: #5a3e1b;
   margin-bottom: 20px;
@@ -237,12 +226,15 @@ header {
 }
 
 .broke-description {
-  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #5a3e1b;
   max-width: 600px;
   margin: 0 auto;
+}
+.broke-description,
+p {
+  font-size: 2rem;
 }
 
 .broke-image {
@@ -267,7 +259,7 @@ header {
   background: #ffd700;
   padding: 12px 25px;
   border-radius: 25px;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Inknut Antiqua", serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: #5a3e1b;
@@ -277,34 +269,34 @@ header {
 /* Desktop Layout */
 @media (min-width: 768px) {
   .broke-section {
-      padding: 80px 20px;
+    padding: 80px 20px;
   }
-  
+
   .broke-content {
-      flex-direction: row;
-      align-items: center;
-      gap: 60px;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
   }
-  
+
   .broke-text {
-      order: 1;
-      flex: 1;
-      text-align: left;
+    order: 1;
+    flex: 1;
+    text-align: left;
   }
-  
+
   .broke-image {
-      order: 2;
-      flex: 0 0 45%;
-      transform: translateY(-20px);
+    order: 2;
+    flex: 0 0 45%;
+    transform: translateY(-20px);
   }
-  
+
   .broke-img {
-      transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
-  
+
   .price-tag {
-      font-size: 1.8rem;
-      padding: 15px 30px;
+    font-size: 1.8rem;
+    padding: 15px 30px;
   }
 }
 
@@ -352,21 +344,25 @@ header {
   max-width: 30ch; /* Begrænser længden af linjen */
 }
 
+.footer_overskrift,
+p {
+  font-size: 2rem;
+}
+
 .footer_overskrift h3 {
   font-size: 40px;
 }
 
 .kategori {
   margin-right: 40px;
+  font-size: 2rem;
 }
 .folg_os {
   grid-column: 2 / 3;
+  font-size: 2rem;
 }
 
 @media (min-width: 552px) {
-
-
-
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -384,6 +380,5 @@ header {
     grid-column: 3 / 4;
   }
 }
-
 
 /* FOOOTEEER SLUUUUT */
