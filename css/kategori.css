@@ -119,9 +119,16 @@ button a {
   border-radius: 10px;
 }
 
-.h1_tekst {
-  display: grid;
+.h1_tekst  {
   text-align: center;
+}
+
+.h1_tekst:before {
+  content: "Fucking ";
+}
+
+.h1_tekst:after {
+  content: " food";
 }
 
 /* Card */
