@@ -1,10 +1,15 @@
 const listContainer = document.querySelector(".card_container");
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const mealType = urlParams.get("mealType");
+const cuisine = urlParams.get("cuisine");
 
-if (mealType) {
-  fetch(`https://dummyjson.com/recipes/meal-type/${mealType}`)
+const myCategory = new URLSearchParams(window.location.search).get("cuisine");
+const overskrift = document.querySelector(".h1_tekst");
+
+overskrift.innerHTML = myCategory;
+
+if (cuisine) {
+  fetch(`https://dummyjson.com/recipes/tag/${cuisine}`)
     .then((response) => response.json())
     .then((data) => showList(data.recipes));
 } else {
@@ -19,12 +24,14 @@ function showList(recipes) {
   recipes
     .map((recipe, index) => {
       markup += `
+
         <div class="card">
-        <a href="recipe.html">
+        <a href="recipe.html?id=${recipe.id}">
           <img src="https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp" alt="Pizza" class="item-img" />
           </a>
           <div class="item-name">${recipe.name}</div>
         </div>
+        
         
       
        `;
